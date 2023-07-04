@@ -64,7 +64,7 @@ ssh-keygen -t rsa
 حال با فرمان زیر کلید عمومی ساخته شده در سرور آزاد کپی میشود:
 
 ```bash
-ssh-copy-id -i ~/.ssh/id_rsa.pub root@آی.پی.سرور.آزاد
+ssh-copy-id -i ~/.ssh/id_rsa.pub root@188.nimiran.ml
 ```
 
 
@@ -103,7 +103,7 @@ After=network-online.target
 
 [Service]
 Type=simple
-ExecStart=ssh -N -R 0.0.0.0:%i:localhost:%i root@آی.پی.سرور.آزاد
+ExecStart=ssh -N -R 0.0.0.0:%i:localhost:%i root@188.nimiran.ml
 Restart=on-failure
 RestartSec=10
 
@@ -114,7 +114,7 @@ WantedBy=multi-user.target
 برای پیاده سازی این روش در دیستروی CentOS لازم هست فایل اجرایی ssh را با مسیر محض آن تنظیم کنید که معمولا در usr/bin/ ذخیره شده. (اگر هنوزم مشکل در رابطه با Absolute Path دریافت کردید، فرمان "which ssh" را اجرا کنید تا مسیر محض ssh را به شما اعلام کند)
 در نتیجه باید خط فرمان زیر را جایگزین فرمان اجرایی در تنظیمات فایل سرویس کنید:
 ```bash
-ExecStart=/usr/bin/ssh -N -R 0.0.0.0:%i:localhost:%i root@آی.پی.سرور.آزاد
+ExecStart=/usr/bin/ssh -N -R 0.0.0.0:%i:localhost:%i root@188.nimiran.ml
 ```
 
 
